@@ -11,9 +11,55 @@ body {
     margin: 0;
 }
 
+.hidden {
+    display: none;
+}
+
+.logo-splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.splash-logo {
+    width: 150px;
+    height: auto;
+    animation: logoFadeIn 2s ease-in-out forwards;
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Styles for the main content */
 .container {
     display: flex;
     height: 100vh;
+    opacity: 0;
+    animation: fadeInMain 1s ease-in-out forwards;
+}
+
+@keyframes fadeInMain {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .login-box {
