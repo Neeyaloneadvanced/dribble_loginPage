@@ -1,4 +1,3 @@
-/* Reset margin and padding */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,18 +7,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f6f6f6;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     margin: 0;
 }
 
 .container {
     display: flex;
-    height: 100vh; /* Full container height */
+    height: 100vh;
 }
 
 .login-box {
     flex: 1;
-    max-width: 500px; /* Increased width of the login form */
+    max-width: 500px;
     padding: 40px;
     background-color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -30,15 +29,15 @@ body {
 
 .header {
     display: flex;
-    flex-direction: row; /* Keep in row */
-    align-items: flex-start; /* Align items at the start */
-    margin-bottom: 20px; /* Space below the header */
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
 .region-mortgage {
     display: flex;
-    flex-direction: column; /* Stack Regions and Mortgage vertically */
-    margin-right: 20px; /* Space between this and the new customer section */
+    flex-direction: column;
+    margin-right: 20px;
 }
 
 .logo-column {
@@ -53,9 +52,8 @@ body {
     margin-left: -30px;
 }
 
-
 .region-text {
-    font-size: 22px; /* Font size for REGIONS */
+    font-size: 22px;
     font-weight: bold;
     color: #000;
     margin-top: 20px;
@@ -65,7 +63,6 @@ body {
     font-size: 16px;
     color: #000;
 }
-
 
 .new-customer-column {
     display: flex;
@@ -78,25 +75,60 @@ body {
     margin-right: 5px;
 }
 
-
 .enroll-btn {
+    position: relative;
     background-color: #dbf4e0;
     border: none;
-    padding: 4px ;
+    padding: 4px;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
     font-size: 13px;
     font-weight: 400;
-    margin-right: -40px;
 }
 
+.tooltip-text {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 100%; /* Adjusted to position below the button */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 150px;
+}
+
+.enroll-btn:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tooltip-text li {
+    margin: 5px 0;
+}
+
+.tooltip-text li::before {
+    content: "•";
+    color: green;
+    margin-right: 5px;
+}
 
 .welcome-back {
     font-size: 25px;
     font-weight: bold;
     color: #000;
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -106,7 +138,6 @@ body {
     margin-top: 10px;
 }
 
-
 form {
     margin-top: 20px;
 }
@@ -114,8 +145,8 @@ form {
 .input-container {
     position: relative;
     margin-bottom: 20px;
-    margin-left: 10px; /* Reduced left margin */
-    margin-right: 10px; /* Reduced right margin */
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 label {
