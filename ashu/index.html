@@ -10,7 +10,6 @@
     <div class="container">
         <div class="login-box">
             <div class="header">
-                <!-- Header section with logo and text -->
                 <div class="logo-column">
                     <img src="logo.png" alt="Logo" class="logo">
                 </div>
@@ -18,16 +17,22 @@
                     <div class="region-text">Regions</div>
                     <div class="mortgage-text">Mortgage</div>
                 </div>
-                <!-- New customer section aligned horizontally -->
                 <div class="new-customer-column">
                     <span class="new-customer-text">Are you a new customer?</span>
-                    <button class="enroll-btn">Enroll Now</button>
+                    <button class="enroll-btn">Enroll Now
+                        <span class="tooltip-text">
+                            <ul>
+                                <li>Easy Enrollment</li>
+                                <li>Secure Access</li>
+                                <li>24/7 Support</li>
+                                <li>Exclusive Offers</li>
+                            </ul>
+                        </span>
+                    </button>
                 </div>
             </div>
-
             <div class="welcome-back">Welcome Back</div>
             <div class="sign-in-text">Sign in to your Regions MyMortgage account.</div>
-
             <form>
                 <div class="input-container">
                     <input type="text" id="onlineID" placeholder=" " required>
@@ -37,12 +42,10 @@
                     <input type="password" id="password" placeholder=" " required>
                     <label for="password">Password</label>
                 </div>
-
                 <div class="remember-me">
                     <input type="checkbox" id="rememberMe">
                     <label for="rememberMe">Remember Me</label>
                 </div>
-
                 <button type="submit" class="login-btn">Log In</button>
                 <div class="forgot-links">
                     <a href="#">Forgot your Online ID?</a> | 
@@ -50,7 +53,6 @@
                 </div>
             </form>
         </div>
-
         <div class="image-box">
             <img src="home.jpg" alt="House" class="house-img">
         </div>
